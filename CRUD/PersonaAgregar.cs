@@ -52,11 +52,33 @@ namespace CRUD
             }
         }
 
-        public static modificarPersona(Personas personas)
+        public static int modificarPersona(Personas personas)
         {
+            int resultado = 1;
+            using (SqlConnection conexion = BDGeneral.ObtenerConexion())
+            {
+                string query = "update Empleados set Nombre='"+personas.Nombre+ "', Apellido='"+personas.Apellido+"', Email='"+personas.Email+"', Telefono='"+personas.Telefono+"' where Id= "+personas.Id+" ";
+                SqlCommand comando = new SqlCommand(query, conexion);
+                resultado = comando.ExecuteNonQuery();
+                conexion.Close();   
+            }
+            return resultado;
+        }
+
+
+        public static int EliminarP(int Id)
+        {
+            int retorno = 0;
+            using (SqlConnection conexion = BDGeneral.ObtenerConexion())
+            {
+                string query = "delete from Empleados where Id= "+Id+"";
+                SqlCommand comando = new SqlCommand(query, conexion);
+
+                retorno = comando.ExecuteNonQuery();
+            }
+            return retorno;
 
         }
-           
 
     }
 }

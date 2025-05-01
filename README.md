@@ -8,22 +8,22 @@ Este proyecto consiste en una aplicación de escritorio realizada con **C# y Win
 -  Botón en la interfaz para visualizar el reporte.
 
 
-## 🗃 Base de Datos
+ Base de Datos
 
 La base de datos utilizada en este proyecto se encuentra en la carpeta `BD_SQL_SERVER`.
 
-###  Cómo restaurar la base de datos:
+  Cómo restaurar la base de datos:
 
 1. Abrir **SQL Server Management Studio**.
 2. Conectarse a su servidor local.
 3. Abre y ejecuta el script `base_datos.sql`.
 4. Verifica que la base se creó correctamente.
 
-📌 **Importante:** Asegurarse de que el nombre de la base de datos en el script coincida con el que usa en la conexión dentro del proyecto
+ **Importante:** Asegurarse de que el nombre de la base de datos en el script coincida con el que usa en la conexión dentro del proyecto
 
 ---
 
-## 📊 Reportes con Crystal Reports
+##  Reportes con Crystal Reports
 
 
 Pedro Enrique Cancino Venavides.

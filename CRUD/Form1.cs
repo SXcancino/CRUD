@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+
 
 namespace CRUD
 {
@@ -27,7 +29,7 @@ namespace CRUD
 
     if (string.IsNullOrWhiteSpace(txtId.Text))
     {
-        // Si txtId está vacío, agregamos un nuevo registro
+        
         int resultado = PersonaAgregar.AgregarP(persona);
         if (resultado > 0)
         {
@@ -40,7 +42,7 @@ namespace CRUD
     }
     else
     {
-        // Si txtId tiene valor, modificamos el registro existente
+        
         persona.Id = Convert.ToInt32(txtId.Text);
         int resultado = PersonaAgregar.modificarPersona(persona);
         if (resultado > 0)
@@ -122,5 +124,16 @@ namespace CRUD
                 refrescarPantalla();
             }
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+            ReportDocument reporte = new ReportDocument();
+            reporte.Load(@"C:\Users\SoyyE\source\repos\CRUD\CRUD\CrystalReport1.rpt"); 
+            crystalReportViewer1.ReportSource = reporte;
+        }
+
+        
     }
 }
+

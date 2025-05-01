@@ -16,15 +16,10 @@ La base de datos utilizada en este proyecto se encuentra en la carpeta `BD_SQL_S
 
 1. Abrir **SQL Server Management Studio**.
 2. Conectarse a su servidor local.
-3. Abre y ejecuta el script `base_datos.sql`.
-4. Verifica que la base se creó correctamente.
+3. Abrir y ejecutar el script `base_datos.sql`.
+4. Verificar que la base se creó correctamente.
 
  **Importante:** Asegurarse de que el nombre de la base de datos en el script coincida con el que usa en la conexión dentro del proyecto
-
----
-
-##  Reportes con Crystal Reports
-
 
 Pedro Enrique Cancino Venavides.
 ---------------------------------
